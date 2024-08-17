@@ -1,0 +1,53 @@
+---
+import Header from '../components/Header.astro';
+
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content={description}>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image" href="/public/img/Isotipo_TKUIDO.png" />
+    <link rel="stylesheet" href="../styles/layout.module.css">
+    <title>{title}</title>
+  </head>
+    <body>
+      <Header />
+      <slot />
+    </body>
+</html>
+
+<style is:global>
+  @font-face {
+    font-family: 'Avenir LTStd-roman';
+    src: url(/public/fonts/AVENIRLTSTD-ROMAN.OTF);
+  }
+
+  @font-face {
+    font-family: 'Avenir LTStd-black';
+    src: url(/public/fonts/AVENIRLTSTD-BLACK.OTF);
+  }
+
+  *{
+  font-family: 'Avenir LTStd-roman',monospace, sans-serif ;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  background: #F0F9F2;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-family: 'Avenir LTStd-black';
+}
+
+</style>
+

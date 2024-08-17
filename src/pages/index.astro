@@ -1,16 +1,12 @@
 ---
+import BaseLayout from "../layout/BaseLayout.astro"
+import ButtoWhatsapp from "../components/ButtoWhatsapp.astro"
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title={"Home"} description={"Página de inicio de TKUIDO venta de seguros "}>
+	<main>
+		<h1>hola</h1>
+		<ButtoWhatsapp text="Consulta en Linea" message="Hola! quiero más información de sus servicios" />
+	</main>
+</BaseLayout>
