@@ -1,4 +1,6 @@
 ---
+import Header from '../components/Header.astro';
+
 interface Props {
   title: string;
   description: string;
@@ -17,6 +19,7 @@ const { title, description } = Astro.props;
     <title>{title}</title>
   </head>
     <body>
+      <Header />
       <slot />
     </body>
 </html>
@@ -32,10 +35,11 @@ const { title, description } = Astro.props;
     src: url(/public/fonts/AVENIRLTSTD-BLACK.OTF);
   }
 
-  html {
+  *{
   font-family: 'Avenir LTStd-roman',monospace, sans-serif ;
-  font-size: 16px;
-  line-height: 1.5;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
   background: #F0F9F2;
   margin: 0;
   padding: 0;

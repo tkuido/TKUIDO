@@ -1,8 +1,59 @@
 ---
+import ButtoWhatsapp from "./ButtoWhatsapp.astro"
 ---
 
 <header>
+  <div id="logo-container">
+    <a href="/" aria-label="Go to homepage">
+      <img src="/public/img/Isotipo_TKUIDO.png" alt="TKUIDO" width="100" height="100" />
+    </a>
+    <h1>TKUIDO</h1>
+  </div>
+  
   <nav>
-    
+    <a href="/">Inicio</a>
+    <a href="#">Noticias</a>
+    <a href="#">Servicios</a>
+    <a href="#">Pólizas</a>
+    <a href="/nosotros">Nosotros</a>
+    <a href="/contacto">Contáctanos</a>
   </nav>
+
+  <ButtoWhatsapp text="Consulta en Linea" message="Hola! quiero más información de sus servicios" />
 </header>
+
+<style>
+  header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+    height: 80px;
+    width: 100%;
+  }
+  #logo-container{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
+
+  #logo-container img{
+    height: 60px;
+    width: 60px;
+  }
+
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+    gap: 16px;
+    margin-right: 20px;
+  }	
+
+  nav a{
+    color: #111406;
+    font-weight: 600;
+  }
+
+</style>
