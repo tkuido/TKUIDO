@@ -1,0 +1,47 @@
+---
+  interface Props {
+    //url: string; es el link de whatsapp pero si fueran varios se descomenta para usarlo
+    text?: string;
+    message?: string;
+  }
+
+  const { text, message } = Astro.props;
+---
+
+<a href="https://wa.me/584126206812">
+  <button>{text}
+    <img src="/public/img/icons/icons-whatsapp.svg" alt="icono whatsapp">
+  </button>
+  
+</a>
+
+<style>
+  button{
+    background: #25d366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transform: all .5s ease;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+
+  button img{
+    width: 20px;
+    height: 20px;
+    background: #25d366 ;
+    margin-left: 10px;
+
+  }
+
+  button:hover{
+    background: #128c7e;
+    img{
+      background: #128c7e;
+    }
+  }
+
+</style>
