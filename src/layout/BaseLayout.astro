@@ -1,6 +1,8 @@
 ---
+
 import Header from "../components/Header.astro";
 import MainStart from "../components/MainStart.astro";
+import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
   title: string;
@@ -18,6 +20,7 @@ const { title, description } = Astro.props;
     <link rel="icon" type="image" href="/public/img/Isotipo_TKUIDO.png" />
     <link rel="stylesheet" href="../styles/layout.module.css" />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body>
     <Header />
