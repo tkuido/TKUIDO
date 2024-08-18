@@ -1,0 +1,72 @@
+---
+import ButtoWhatsapp from "./ButtoWhatsapp.astro";
+---
+
+<div id="imagen">
+  <div id="texto">
+    <h1>Mantén seguro lo que más quieres.</h1>
+    <h2>
+      Con TKUIDO descubre y compra las mejores pólizas de seguro al mejor
+      precio.
+    </h2>
+    <p>
+      Más del 80% de los trabajadores en Venezuela mantienen una relación
+      laboral informal, y la mayoría de ellos no tienen ningún tipo de seguro.
+    </p>
+    <ButtoWhatsapp
+      text="Consulta en Linea"
+      message="Hola! quiero más información de sus servicios"
+    />
+  </div>
+</div>
+
+<style>
+  #imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 50px;
+    margin-left: calc(100vw - 98%);
+    margin-right: calc(100vw - 98%);
+    padding: 50px;
+    background: url("../../public/img/bgimage.jpg");
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.85);
+  }
+  #texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    text-align: start;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 16px;
+  }
+  h1,
+  h2,
+  p {
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 769px) {
+    #imagen {
+      filter: brightness(0.);
+    }
+    #texto {
+      text-align: center;
+      width: fit-content;
+    }
+    p {
+      color: white;
+    }
+  }
+</style>
