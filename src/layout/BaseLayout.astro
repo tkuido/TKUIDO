@@ -1,7 +1,5 @@
 ---
-
 import Header from "../components/Header.astro";
-import MainStart from "../components/MainStart.astro";
 import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
@@ -18,13 +16,11 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image" href="/public/img/Isotipo_TKUIDO.png" />
-    <link rel="stylesheet" href="../styles/layout.module.css" />
     <title>{title}</title>
     <ViewTransitions />
   </head>
   <body>
     <Header />
-    <MainStart />
     <slot />
   </body>
 </html>
@@ -42,13 +38,15 @@ const { title, description } = Astro.props;
 
   * {
     font-family: "Avenir LTStd-roman", monospace, sans-serif;
-    list-style: none;
-    text-decoration: none;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
 
+  a {
+    list-style: none;
+    text-decoration: none;
+  }
   body {
     background: #f0f9f2;
   }

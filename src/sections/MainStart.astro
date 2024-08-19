@@ -1,5 +1,5 @@
 ---
-import ButtoWhatsapp from "./ButtoWhatsapp.astro";
+import ButtoWhatsapp from "../components/ButtoWhatsapp.astro";
 ---
 
 <div id="imagen">
@@ -13,15 +13,20 @@ import ButtoWhatsapp from "./ButtoWhatsapp.astro";
       Más del 80% de los trabajadores en Venezuela mantienen una relación
       laboral informal, y la mayoría de ellos no tienen ningún tipo de seguro.
     </p>
-    <ButtoWhatsapp
-      text="Consulta en Linea"
-      message="Hola! quiero más información de sus servicios"
-    />
+
+    <div id="whatsapp-container">
+      <ButtoWhatsapp
+        text="Consulta en Linea"
+        message="Hola! quiero más información de sus servicios"
+      />
+    </div>
+
   </div>
 </div>
 
 <style>
   #imagen {
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -29,11 +34,11 @@ import ButtoWhatsapp from "./ButtoWhatsapp.astro";
     margin-left: calc(100vw - 98%);
     margin-right: calc(100vw - 98%);
     padding: 50px;
-    background: url("../../public/img/bgimage.jpg");
+    background: linear-gradient(rgba(5,7,12,0.15),rgba(5,7,12,0.15)),
+    url("../../public/img/bgimage.jpg") no-repeat center center fixed; 
     border-radius: 15px;
     background-size: cover;
     background-position: center;
-    filter: brightness(0.85);
   }
   #texto {
     display: flex;
