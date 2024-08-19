@@ -1,3 +1,121 @@
+---
+
+---
+
 <section id="servicios-container">
   <h2>Sercicios</h2>
+  <p>Conoce nuestros servicios</p>
+  <div class="servicio">
+
+    <div class="button-service">
+      <a href='/servicios/telemedicina'>
+        <button>
+          <img src="/public/img/telemedicine.png" alt="Servicio de telemedicina">
+        </button>
+      </a>
+      <h3>Telemedicina</h3>
+    </div>
+
+    <div class="button-service">
+      <a href='/servicios/funerario'>
+        <button>
+          <img src="/public/img/funebre.png" alt="Seguro funerario">
+        </button>
+      </a>
+      <h3>Funerario</h3>
+    </div>
+
+    <div class="button-service">
+      <a href='/servicios/AsistenciaVial'>
+        <button>
+          <img src="/public/img/asistenciaVial.png" alt="Asistencia vial">
+        </button>
+      </a>
+      <h3>Asistencia Vial</h3>
+    </div>
+
+    <div class="button-service">
+      <a href='/servicios/RCV'>
+        <button>
+          <img src="/public/img/RCV-coche.png" alt="RCV">
+        </button>
+      </a>
+      <h3>RCV</h3>
+    </div>
+
+  </div>
 </section>
+
+<style>
+  #servicios-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .servicio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px;
+    gap: 2vw;
+  }
+
+  .button-service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  a {
+    border: 1.5px solid #D9D9D9;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #262626;
+  }
+
+  button {
+    background: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transform: all .5s ease;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+
+  button img {
+    width: 100px;
+    height: 100px;
+    background: #ffffff;
+    margin-left: 10px;
+  }
+
+  button:hover {
+    background: #1acd81;
+    img {
+      background: #1acd81;
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #333;
+  }
+</style> 
