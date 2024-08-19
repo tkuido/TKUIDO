@@ -4,6 +4,81 @@ import BaseLayout from "../../layout/BaseLayout.astro"
 
 <BaseLayout title={"RCV"} description={"Blog de responsabilidad civil"}>
   <main>
-    <h1>rcv</h1>
+    <div id="container">
+      <article>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fWfsNjc3pzc?si=vtIDjB9KRXLi8t4X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </article>
+      <h1>RCV</h1>
+      <div id="info">
+        <p>La RCV es un seguro obligatorio en Venezuela que todo propietario de un vehículo debe tener. Este seguro cubre los daños que tu vehículo pueda causar a terceros, ya sean personas o bienes, en caso de un accidente de tránsito. La Responsabilidad Civil del Vehículo es obligatoria por ley para garantizar que las víctimas de un accidente tengan una forma de resarcir los daños sufridos. Si causas un accidente, tu aseguradora se encargará de cubrir los gastos de las reparaciones o las lesiones de los terceros afectados, hasta el límite establecido en la póliza. La RCV no cubre:</p>
+        <br>
+        <ul>
+          <li><strong>Daños a tu propio vehículo: </strong>Para proteger tu vehículo, necesitarás una cobertura adicional como la cobertura amplia.</li>
+          <li><strong>Lesiones a los ocupantes de tu vehículo: </strong>Para cubrir a tus pasajeros, existen coberturas adicionales como la de muerte y lesiones de ocupantes.</li>
+        </ul>
+        <br>
+        <p>Conducir un vehículo sin la póliza de RCV vigente es una infracción que puede acarrear multas y la retención del vehículo. Además, si causas un accidente sin tener este seguro, deberás asumir personalmente todos los gastos derivados del mismo.</p>
+      </div>
+    </div>
   </main>
 </BaseLayout>
+
+<style>
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    width: 60vw;
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: 4%;
+    margin-bottom: 30px;
+  }
+
+  #info {
+    width: 50vw;
+    margin: 0 20px 0 20px;
+  }
+
+  article {
+    margin-bottom: 20px;
+    width: 30vw;
+  }
+
+  iframe {
+    width: 100%;
+    max-width: 100vw;
+    height: 400px;
+    border-radius: 4%;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #6BB580;
+  }
+
+  p {
+    font-size: 1rem;
+    margin: 10px 0;
+    text-align: justify;
+  }
+
+  ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    text-align: justify;
+  }
+
+  li {
+    margin: 5px 0;
+  }
+
+</style>
