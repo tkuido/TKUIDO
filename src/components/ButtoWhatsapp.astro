@@ -6,13 +6,13 @@
   }
 
   const { text, message } = Astro.props;
+  const whatsappUrl = `https://wa.me/584126206812?text=${encodeURIComponent(message || '')}`;
 ---
 
-<a href="https://wa.me/584126206812">
+<a href={whatsappUrl} target="_blank" rel="noopener">
   <button>{text}
     <img src="/public/img/icons/icons-whatsapp.svg" alt="icono whatsapp">
   </button>
-  
 </a>
 
 <style>

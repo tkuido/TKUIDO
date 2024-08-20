@@ -1,12 +1,44 @@
 ---
-import BaseLayout from "../layout/BaseLayout.astro"
-import ButtoWhatsapp from "../components/ButtoWhatsapp.astro"
-
+import BaseLayout from "../layout/BaseLayout.astro";
+import ButtoWhatsapp from "../components/ButtoWhatsapp.astro";
+import MainStart from "../sections/MainStart.astro";
+import Servicios from "../sections/Servicios.astro";
 ---
+<BaseLayout
+  title={"Home"}
+  description={"Página de inicio de TKUIDO venta de seguros "}
+>
+  <main>
+    <section id="hero-container">
+      <MainStart />
+    </section>
 
-<BaseLayout title={"Home"} description={"Página de inicio de TKUIDO venta de seguros "}>
-	<main>
-		<h1>hola</h1>
-		<ButtoWhatsapp text="Consulta en Linea" message="Hola! quiero más información de sus servicios" />
-	</main>
-</BaseLayout>
+    <section id="noticias-container">
+
+    </section>
+
+    <section id="servicio-container">
+      <Servicios />
+    </section>
+
+    <section id="polizas-container">
+
+    </section>
+
+    <section id="nosotro-container">
+
+    </section>
+
+    <section id="contacto-container">
+    </section>
+  </main>
+
+<style>
+  #hero-container {
+    height: 70vh;
+  }
+
+  #servicio-container {
+    width: 100%;
+  }
+</style>
