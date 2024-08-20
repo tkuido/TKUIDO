@@ -6,6 +6,7 @@ import Servicios from "../sections/Servicios.astro";
 import Nosotros from "../sections/Nosotros.astro";
 import Contacto from "../sections/Contacto.astro";
 import FAQ from "../components/FAQ.jsx";
+import Slider from "../sections/Slider.astro"
 ---
 <BaseLayout
   title={"Home"}
@@ -14,6 +15,10 @@ import FAQ from "../components/FAQ.jsx";
   <main>
     <section id="hero-container">
       <MainStart />
+    </section>
+
+    <section id="slider">
+      <Slider />
     </section>
 
     <section id="noticias-container">
@@ -48,6 +53,12 @@ import FAQ from "../components/FAQ.jsx";
 <style>
   #hero-container {
     height: 70vh;
+  }
+
+  #slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   #servicio-container {
