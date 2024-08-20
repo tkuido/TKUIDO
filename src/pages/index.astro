@@ -3,6 +3,10 @@ import BaseLayout from "../layout/BaseLayout.astro";
 import ButtoWhatsapp from "../components/ButtoWhatsapp.astro";
 import MainStart from "../sections/MainStart.astro";
 import Servicios from "../sections/Servicios.astro";
+import Nosotros from "../sections/Nosotros.astro";
+import Contacto from "../sections/Contacto.astro";
+import FAQ from "../components/FAQ.jsx";
+import Slider from "../sections/Slider.astro"
 ---
 <BaseLayout
   title={"Home"}
@@ -11,6 +15,10 @@ import Servicios from "../sections/Servicios.astro";
   <main>
     <section id="hero-container">
       <MainStart />
+    </section>
+
+    <section id="slider">
+      <Slider />
     </section>
 
     <section id="noticias-container">
@@ -26,11 +34,20 @@ import Servicios from "../sections/Servicios.astro";
     </section>
 
     <section id="nosotro-container">
-
+      <Nosotros />
     </section>
 
     <section id="contacto-container">
+      <Contacto />
     </section>
+
+    <section id="faq-container" >
+      <h2>FAQ Preguntas Frecuentes</h2>
+      <div>
+        <FAQ client:visible />
+      </div>
+    </section>
+    
   </main>
 
 <style>
@@ -38,7 +55,41 @@ import Servicios from "../sections/Servicios.astro";
     height: 70vh;
   }
 
+  #slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
   #servicio-container {
     width: 100%;
+  }
+
+  #nosotro-container {
+    width: 100%;
+  }
+
+  #contacto-container {
+    width: 100%;
+  }
+
+  #faq-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  #faq-container h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  #faq-container div {
+    width: 50%;
   }
 </style>

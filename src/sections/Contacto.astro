@@ -1,0 +1,75 @@
+---
+import ButtoWhatsapp from "../components/ButtoWhatsapp.astro";
+---
+<section id="container">
+  <img src="/public/img/contacto.jpg" alt="euipo tkuido">
+  <div class="nosotros-info">
+    <div class="titulos">
+      <h2>Contáctanos</h2>
+      <h3>Nuestro equipo te espera</h3>
+    </div>
+    <p>Nuestro equipo de atención al cliente te espera para ayudar en tu proceso de compra o aclarar cualquier duda.</p>
+    <p>Si deseas más información sobre nuestros servicios, pólizas o cualquier otro tema, no dudes en contactarnos.</p>
+    <ButtoWhatsapp text="Consulta en Linea" message="Hola! quiero más información de sus servicios" />
+  </div>
+</section>
+
+<style>
+#container {
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+  height: 65vh;
+}
+
+.nosotros-info {
+  width: 50%;
+  height: 100%;
+}
+
+img {
+  width: 50%;
+  height: 100%;
+  border-radius: 8%;
+}
+
+button {
+  background-color: #6BB580;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transform: all .5s ease;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.titulos{
+  text-align: center;
+  padding: 10px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+h3 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+p {
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #333;
+  text-align: justify;
+}
+
+</style>

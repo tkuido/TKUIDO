@@ -1,0 +1,57 @@
+---
+---
+
+<div class="slider">
+  <div class="slider-container">
+
+    <div class="slider-item">
+      <img src="/public/img/aliados/Fenix-salud.png" alt="clinica fenix salud" />
+    </div>
+
+    <div class="slider-item">
+      <img src="/public/img/aliados/Grupo-CASONITA.png" alt="frupo casonita" />
+    </div>
+
+    <div class="slider-item">
+      <img src="/public/img/aliados/telemedi.png" alt="telemedi salud" />
+    </div>
+
+  </div>
+</div>
+
+<style>
+  .slider{
+    width: 25vw;
+    height: auto;
+    max-width: auto;
+    overflow: hidden;
+  }
+
+  .slider-container{
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(200px*3);
+  }
+
+  .slider-item{
+    width: 200px;
+  }
+
+  .slider-item img{
+    width: 100%;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+      -webkit-transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-200px*3));
+      -webkit-transform: translateX(calc(-200px*3));
+    }
+    
+  }
+
+</style>
