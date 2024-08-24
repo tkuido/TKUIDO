@@ -30,7 +30,17 @@ import Slider from "../sections/Slider.astro"
     </section>
 
     <section id="polizas-container">
-      <Card idCard={'1'} client:visible />
+      <h2>Productos</h2>
+      <div>
+        <Card idCard={'1'} client:visible />
+        <Card idCard={'1'} client:visible />
+        <Card idCard={'1'} client:visible />
+      </div>
+      <a href="">
+        <button>
+          Ver todos los productos
+        </button>
+      </a>
     </section>
 
     <section id="nosotro-container">
@@ -63,6 +73,47 @@ import Slider from "../sections/Slider.astro"
 
   #servicio-container {
     width: 100%;
+  }
+
+  #polizas-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  #polizas-container h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  #polizas-container div {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  #polizas-container a button {
+    background: #6BB580;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transform: all .5s ease;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+
+  #polizas-container a button:hover {
+    background: #128c7e;
   }
 
   #nosotro-container {
