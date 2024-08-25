@@ -1,5 +1,4 @@
 ---
-import ButtoWhatsapp from "../components/ButtoWhatsapp.astro";
 ---
 <section id="container">
   <img src="../img/contacto.jpg" alt="contacto tkuido">
@@ -8,9 +7,13 @@ import ButtoWhatsapp from "../components/ButtoWhatsapp.astro";
       <h2>Contáctanos</h2>
       <h3>Nuestro equipo te espera</h3>
     </div>
-    <p>Nuestro equipo de atención al cliente te espera para ayudar en tu proceso de compra o aclarar cualquier duda.</p>
-    <p>Si deseas más información sobre nuestros servicios, pólizas o cualquier otro tema, no dudes en contactarnos.</p>
-    <ButtoWhatsapp text="Consulta en Linea" message="Hola! quiero más información de sus servicios" />
+    <div id="info"> 
+      <p>Nuestro equipo de atención al cliente te espera para ayudar en tu proceso de compra o aclarar cualquier duda.</p>
+      <p>Si deseas más información sobre nuestros servicios, pólizas o cualquier otro tema, no dudes en contactarnos.</p>
+    </div>
+    <div id="formulario">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe2pH51Bg-M_tIqjaOrVCu5AvwTw0zLg5j563ZQcQ8oHOMNXw/viewform?embedded=true" width="640" height="924">Cargando…</iframe>
+    </div>
   </div>
 </section>
 
@@ -19,12 +22,17 @@ import ButtoWhatsapp from "../components/ButtoWhatsapp.astro";
   display: flex;
   flex-direction: row;
   padding: 50px;
-  height: 65vh;
+  height: 100vh;
 }
 
 .nosotros-info {
   width: 50%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
 }
 
 img {
@@ -33,18 +41,6 @@ img {
   border-radius: 8%;
 }
 
-button {
-  background-color: #6BB580;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  transform: all .5s ease;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-}
 
 .titulos{
   text-align: center;
@@ -70,6 +66,24 @@ p {
   font-weight: 400;
   color: #333;
   text-align: justify;
+}
+
+#info {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+#formulario {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 </style>
