@@ -25,7 +25,7 @@ const Card = ({ idCard }) => {
             <li key={index} className="text-gray-600">{feature}</li>
           ))}
         </ul>
-        <a href="">
+        <a href={`/products/${idCard}`}>
           <button className="bg-backgroundButton hover:bg-backgroundButtonHover text-white font-bold py-2 px-4 rounded">
             Ver detalles
           </button>

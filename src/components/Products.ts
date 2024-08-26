@@ -10,7 +10,7 @@ export const getProductById = (id: string) => {
       tipo: 'tipo 1',
       img: {
         src: '/img/products/product-1.jpg',
-        alt: 'Imagen 1'
+        alt: 'Servicio fúnebre'
       },
       features: ['Velatorio en capilla o en domicilio', 'Cremación', 'Ataúd Standard', 'Traslado del cuerpo desde el lugar donde falleció hasta el lugar de la velación/ cremación, a nivel regional'],
       adicional: {

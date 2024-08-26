@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../layout/BaseLayout.astro";
+import ButtonBack from "../components/ButtonBack.astro";
+---
+
+<BaseLayout
+  title={"Categoria"}
+  description={"Página de categorias de TKUIDO venta de seguros "}
+>
+<ButtonBack ruta="/"/>
+  <main>
+    <h1>Categorías</h1>
+    <section id="categoria-container">
+      <a href="" id="paquetes">
+        <h2>Paquetes</h2>
+      </a>
+
+      <a href="" id="funebre">
+        <h2>Fúnebre</h2>
+      </a>
+
+      <a href="" id="Telemedicina">
+        <h2>Telemedicina</h2>
+      </a>
+
+      <a href="/404" id="RCV">
+        <h2>RCV</h2>
+      </a>
+
+      <a href="/404" id="Asistencia">
+        <h2>Asistencia Vial</h2>
+      </a>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30vh;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  #categoria-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #333;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    transition: all 0.5s ease;
+  }
+
+  a:hover {
+    background-color: #6BB580;
+    color: white;
+  }
+</style>
