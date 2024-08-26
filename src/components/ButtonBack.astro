@@ -1,0 +1,41 @@
+---
+interface Props{
+  ruta: string
+}
+
+const {ruta} = Astro.props
+---
+
+<a href={ruta}>
+  <button>
+    <img src="/img/icons/arrowLeft.png" alt="Voler página anterior">
+    Volver
+  </button>
+</a>
+
+<style>
+  a{
+    margin-top: 20px;
+    display: block;
+    margin-left: calc(100vw - 97%);
+  }
+  button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #6BB580;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  button img{
+    width: 20px;
+    height: 20px;
+  }
+
+  button:hover{
+    background-color: #128c7e;
+  }
+</style>

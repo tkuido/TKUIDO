@@ -12,11 +12,11 @@ import ButtoWhatsapp from "./ButtoWhatsapp.astro"
   
   <nav>
     <a href="/">Inicio</a>
-    <a href="#noticias-container">Noticias</a>
-    <a href="#servicio-container">Servicios</a>
-    <a href="#polizas-container">Pólizas</a>
-    <a href="#nosotros-container">Nosotros</a>
-    <a href="#contacto-container">Contáctanos</a>
+    <a href="/#noticias-container">Noticias</a>
+    <a href="/#servicio-container">Servicios</a>
+    <a href="/#polizas-container">Productos</a>
+    <a href="/#nosotro-container">Nosotros</a>
+    <a href="/#contacto-container">Contáctanos</a>
   </nav>
 
   <ButtoWhatsapp text="Consulta en Linea" message="Hola! quiero más información de sus servicios" />
@@ -29,7 +29,8 @@ import ButtoWhatsapp from "./ButtoWhatsapp.astro"
     align-items: center;
     padding: 0 20px;
     height: 80px;
-    width: 100%;
+    margin-left: calc(100vw - 98%);
+    margin-right: calc(100vw - 98%);
   }
   #logo-container{
     display: flex;
@@ -38,8 +39,8 @@ import ButtoWhatsapp from "./ButtoWhatsapp.astro"
   }
 
   #logo-container img{
-    height: 60px;
-    width: 60px;
+    height: 70px;
+    width: 70px;
   }
 
   #logo-container h1{
