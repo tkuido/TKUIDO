@@ -1,66 +1,80 @@
 ---
-import ButtoWhatsapp from "./ButtoWhatsapp.astro"
+import ButtoWhatsapp from "./ButtoWhatsapp.astro";
 ---
 
 <header>
   <div id="logo-container">
     <a href="/" aria-label="Go to homepage">
-      <img src="../img/Isotipo_TKUIDO.png" alt="TKUIDO" width="100" height="100" />
+      <img
+        src="../img/Isotipo_TKUIDO.png"
+        alt="TKUIDO"
+        width="100"
+        height="100"
+      />
     </a>
     <h1>TKUIDO</h1>
   </div>
-  
-  <nav>
-    <a href="/">Inicio</a>
-    <a href="/#noticias-container">Noticias</a>
-    <a href="/#servicio-container">Servicios</a>
-    <a href="/#polizas-container">Productos</a>
-    <a href="/#nosotro-container">Nosotros</a>
-    <a href="/#contacto-container">Contáctanos</a>
-  </nav>
 
-  <ButtoWhatsapp text="Consulta en Linea" message="Hola! quiero más información de sus servicios" />
+  <div id="navbar-inicio">
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/#noticias-container">Noticias</a>
+      <a href="/#servicio-container">Servicios</a>
+      <a href="/#polizas-container">Productos</a>
+      <a href="/#nosotro-container">Nosotros</a>
+      <a href="/#contacto-container">Contáctanos</a>
+    </nav>
+
+    <ButtoWhatsapp
+      text="Consulta en Linea"
+      message="Hola! quiero más información de sus servicios"
+    />
+  </div>
 </header>
 
 <style>
-  header{
+  header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     height: 80px;
     margin-left: calc(100vw - 98%);
     margin-right: calc(100vw - 98%);
   }
-  #logo-container{
+  #logo-container {
     display: flex;
     align-items: center;
-    margin-right: auto;
+    /*margin-right: auto;*/
   }
 
-  #logo-container img{
+  #logo-container img {
     height: 70px;
     width: 70px;
   }
 
-  #logo-container h1{
+  #logo-container h1 {
     font-size: 2rem;
     font-weight: 600;
     color: #111406;
     margin-left: 10px;
   }
-  nav{
+  #navbar-inicio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 25%;
+    /*width: 25%;*/
     gap: 16px;
     margin-right: 20px;
-  }	
+  }
 
-  nav a{
+  nav a {
     color: #111406;
     font-weight: 600;
   }
-
 </style>
