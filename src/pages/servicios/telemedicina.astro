@@ -67,7 +67,7 @@ import ButtonBack from "../../components/ButtonBack.astro"
 
   article {
     margin-bottom: 20px;
-    width: 30vw;
+    width: 40vw;
   }
 
   iframe {
@@ -103,6 +103,25 @@ import ButtonBack from "../../components/ButtonBack.astro"
 
   li {
     margin: 5px 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    #container {
+      width: 90vw;
+    }
+
+    #info {
+      width: 80vw;
+    }
+
+    article {
+      width: 80vw;
+    }
+
+    main{
+      margin-top: 20px;
+    }
+    
   }
 
 </style>
