@@ -3,6 +3,7 @@ import type { GetStaticPaths } from "astro";
 import BaseLayout from "../../layout/BaseLayout.astro";
 import { getProductById } from "../../components/Products.ts";
 import ButtonBack from "../../components/ButtonBack.astro";
+import ButtoWhastapp from "../../components/ButtoWhatsapp.astro";
 
 export const getStaticPaths = (() => {
   
@@ -60,6 +61,10 @@ let product
             ))}
           </ul>
         </div>
+
+        <ButtoWhastapp
+        text="Comprar ahora"
+        message=`Hola! quiero comprar el producto servicios ${product?.title}`/>
 
       </div>
     </div>
