@@ -49,7 +49,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
   }
 
   .servicio {
@@ -120,5 +120,15 @@
     font-weight: 400;
     color: #333;
   }
-</style>
 
+  @media (max-width: 769px) {
+    .servicio {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    button {
+      justify-content: center;
+    }
+  }
+</style>

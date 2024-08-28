@@ -29,7 +29,6 @@
     flex-direction: row;
     padding: 50px;
     height: 100vh;
-
   }
 
   .nosotros-info {
@@ -43,7 +42,7 @@
     width: calc(50% - 120px);
     height: 100%;
     /*width: 50%
-    height: 100%*/ 
+    height: 100%*/
     border-radius: 8%;
   }
 
@@ -87,5 +86,22 @@
     font-weight: 400;
     color: #333;
     text-align: justify;
+  }
+
+  @media (max-width: 769px) {
+    #container {
+      flex-direction: column;
+    }
+    .nosotros-info {
+      width: auto;
+      margin: 0;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      margin-top: 20px;
+    }
+
+    
   }
 </style>
