@@ -1,27 +1,34 @@
 ---
----
-<section id="container">
-  
-    <div class="nosotros-info">
-      <div class="titulos">
-        <h2>Nosotros</h2>
-        <h3>¿Quiénes somos?</h3>
-      </div>
-      <p>TKUIDO 24/7 es una plataforma que busca conectar a personas que buscan algún tipo de seguro con los mejores y más económicos productos de las aseguradoras, así como ofrecer una opción de compra rápida y segura, teniendo siempre a disposición una atención al cliente diligente y efectiva.</p>
-      <a href="/nosotros">
-        <button>Leer más</button>
-      </a>
-    </div>
 
-    <img src="../img/nosotros.jpg" alt="equipo tkuido">
+---
+
+<section id="container">
+  <div class="nosotros-info">
+    <div class="titulos">
+      <h2>Nosotros</h2>
+      <h3>¿Quiénes somos?</h3>
+    </div>
+    <p>
+      TKUIDO 24/7 es una plataforma que busca conectar a personas que buscan
+      algún tipo de seguro con los mejores y más económicos productos de las
+      aseguradoras, así como ofrecer una opción de compra rápida y segura,
+      teniendo siempre a disposición una atención al cliente diligente y
+      efectiva.
+    </p>
+    <a href="/nosotros">
+      <button>Leer más</button>
+    </a>
+  </div>
+
+  <img src="../img/nosotros.jpg" alt="equipo tkuido" />
 </section>
 
 <style>
   #container {
-  display: flex;
-  flex-direction: row;
-  padding: 50px;
-  height: 100vh;
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    height: 100vh;
   }
 
   .nosotros-info {
@@ -31,31 +38,36 @@
   }
 
   img {
-    width: 50%;
+    margin: 0 auto;
+    width: calc(50% - 120px);
     height: 100%;
+    /*width: 50%
+    height: 100%*/
     border-radius: 8%;
   }
 
   button {
-    background-color: #6BB580;
+    background-color: #6bb580;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
-    transform: all .5s ease;
+    transform: all 0.5s ease;
     font-weight: 600;
     display: flex;
     align-items: center;
+    margin-left: 20px;
   }
 
-  .titulos{
+  .titulos {
     text-align: center;
     padding: 10px;
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    /**font-size: 2.2rem; */
     font-weight: 600;
     color: #333;
   }
@@ -68,11 +80,28 @@
   }
 
   p {
-    padding: 10px;
-    font-size: 1.5rem;
+    padding: 20px;
+    font-size: 1.2rem;
+    /**font-size: 1.5rem; */
     font-weight: 400;
     color: #333;
     text-align: justify;
   }
 
+  @media (max-width: 769px) {
+    #container {
+      height: max-content;
+      flex-direction: column;
+      padding: 50px 20px;
+    }
+    .nosotros-info {
+      width: auto;
+      margin: 0;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+  }
 </style>

@@ -1,9 +1,9 @@
 ---
+
 ---
 
 <div class="slider">
   <div class="slider-container">
-
     <div class="slider-item">
       <img src="../img/aliados/Fenix-salud.png" alt="clinica fenix salud" />
     </div>
@@ -15,30 +15,30 @@
     <div class="slider-item">
       <img src="../img/aliados/telemedi.png" alt="telemedi salud" />
     </div>
-
   </div>
 </div>
 
 <style>
-  .slider{
-    width: 25vw;
+  .slider {
+    width: 50vw;
     height: auto;
     max-width: auto;
     overflow: hidden;
   }
 
-  .slider-container{
+  .slider-container {
     display: flex;
+    align-items: center;
     animation: scroll 40s linear infinite;
     -webkit-animation: scroll 40s linear infinite;
-    width: calc(200px*3);
+    width: calc(200px * 3);
   }
 
-  .slider-item{
+  .slider-item {
     width: 200px;
   }
 
-  .slider-item img{
+  .slider-item img {
     width: 100%;
   }
 
@@ -48,10 +48,8 @@
       -webkit-transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-200px*3));
-      -webkit-transform: translateX(calc(-200px*3));
+      transform: translateX(calc(-200px * 3));
+      -webkit-transform: translateX(calc(-200px * 3));
     }
-    
   }
-
 </style>
