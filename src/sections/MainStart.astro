@@ -22,6 +22,22 @@ import ButtoWhatsapp from "../components/ButtoWhatsapp.astro";
         message="Hola! quiero más información de sus servicios"
       />
     </div>
+
+    <div class="social">
+      <a href="https://www.instagram.com/tkuido247?igsh=cWxuMXR4OTM0c2Jm">
+        <img src="../img/icons/icono-instagram.png" alt="instagram">
+      </a>
+      <a href="https://www.facebook.com/people/TKuido-247/61564934094455/">
+        <img src="../img/icons/icon-facebook.png" alt="facebook">
+      </a>
+      <a href="https://www.tiktok.com/@tkuido.247?_t=8pFx3vxYutK&_r=1">
+        <img src="../img/icons/icon-tik-tok.png" alt="tik tok">
+      </a>
+      <a href="https://www.linkedin.com/company/tkuido-24-7/">
+        <img src="../img/icons/icon-linkedin.png" alt="linkedin">
+      </a>
+    </div>
+
   </div>
 </div>
 
@@ -90,11 +106,22 @@ import ButtoWhatsapp from "../components/ButtoWhatsapp.astro";
     margin-bottom: 20px;
   }
 
+  .social {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .social a {
+    width: 60px;
+    height: 60px;
+  }
+
   @media (max-width: 769px) {
     #imagen-wrapper {
       margin-left: calc(100vw - 98vw);
       margin-right: calc(100vw - 98vw);
       padding: 25px;
+      margin-top: auto;
     }
     #imagen {
       background: url("../../public/img/bgimg.png") no-repeat center;
@@ -116,6 +143,11 @@ import ButtoWhatsapp from "../components/ButtoWhatsapp.astro";
     }
     #whatsapp-container {
       margin: auto;
+    }
+
+    .social {
+      margin: auto;
+      margin-top: 10px;
     }
   }
 </style>
