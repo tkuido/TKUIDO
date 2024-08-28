@@ -6,23 +6,38 @@
   <div id="Container">
     <div id="container-izquierdo">
       <img src="../img/Isotipo_TKUIDO.png" alt="logo TKUIDO" />
+
+      <div class="social">
+        <a href="https://www.instagram.com/tkuido247?igsh=cWxuMXR4OTM0c2Jm">
+          <img src="../img/icons/icono-instagram.png" alt="instagram">
+        </a>
+        <a href="https://www.facebook.com/people/TKuido-247/61564934094455/">
+          <img src="../img/icons/icon-facebook.png" alt="facebook">
+        </a>
+        <a href="https://www.tiktok.com/@tkuido.247?_t=8pFx3vxYutK&_r=1">
+          <img src="../img/icons/icon-tik-tok.png" alt="tik tok">
+        </a>
+        <a href="https://www.linkedin.com/company/tkuido-24-7/">
+          <img src="../img/icons/icon-linkedin.png" alt="linkedin">
+        </a>
+      </div>
     </div>
 
     <div class="container-derecha">
       <div class="links-derecha">
         <h4>Inicio</h4>
-        <a href="#noticias-container">Noticias</a>
-        <a href="#servicio-container">Servicios</a>
-        <a href="#polizas-container">Pólizas</a>
-        <a href="#nosotros-container">Nosotros</a>
-        <a href="#contacto-container">Contáctanos</a>
+        <a href="/#noticias-container">Noticias</a>
+        <a href="/#servicio-container">Servicios</a>
+        <a href="/#polizas-container">Productos</a>
+        <a href="/#nosotro-container">Nosotros</a>
+        <a href="/#contacto-container">Contáctanos</a>
       </div>
 
       <div class="links-derecha">
         <h4>Legal</h4>
         <a href="#">Términos y condiciones</a>
         <a href="#">Políticas de privacidad</a>
-        <a href="#">Polñitica de cookies</a>
+        <a href="#">Política de cookies</a>
       </div>
     </div>
   </div>
@@ -107,5 +122,22 @@
     p {
       color: white;
     }
+  }
+
+  .social {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .social a {
+    width: 60px;
+    height: 60px;
+  }
+
+  @media screen and (max-width: 769px){
+    .social{
+      flex-direction: column;
+    }
+
   }
 </style>
