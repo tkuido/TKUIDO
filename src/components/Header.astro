@@ -154,8 +154,12 @@ import ButtoWhatsapp from "./ButtoWhatsapp.astro";
 
   @media (max-width: 769px) {
     header {
+      display: grid;
+      grid-template-columns: 45% 55%;
       padding: 0;
-      justify-content: space-around;
+      height: 80px;
+      margin-left: 20px;
+      margin-right: 20px;
     }
     #logo-container img {
       height: 50px;
@@ -165,6 +169,11 @@ import ButtoWhatsapp from "./ButtoWhatsapp.astro";
     #logo-container h1 {
       font-size: 1.2rem;
     }
+    #navbar-inicio {
+      display: grid;
+      grid-template-columns: 20% 80%;
+      justify-items: center;
+    }
     /**BURGUER MENU */
     .navbar {
       height: 100%;
@@ -172,14 +181,15 @@ import ButtoWhatsapp from "./ButtoWhatsapp.astro";
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      padding: 0 2rem;
+      padding: 0;
       z-index: 3;
     }
     .menu_hamburguesa {
       display: none;
     }
     .menu_hamburguesa:checked + .ul-links {
-      height: calc(50vh - 80px);
+      height: max-content;
+      padding: 2rem 0;
     }
     .logo {
       color: #000;
@@ -205,6 +215,7 @@ import ButtoWhatsapp from "./ButtoWhatsapp.astro";
       justify-content: center;
       align-items: center;
       gap: 2rem;
+      border-radius: 0 0 20px 20px;
       transition: all 0.3s;
     }
     .li-link {
