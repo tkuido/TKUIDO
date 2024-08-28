@@ -1,12 +1,11 @@
 ---
+
 ---
 
 <footer id="footer">
-
   <div id="Container">
-
     <div id="container-izquierdo">
-      <img src="../img/Isotipo_TKUIDO.png" alt="logo TKUIDO">
+      <img src="../img/Isotipo_TKUIDO.png" alt="logo TKUIDO" />
     </div>
 
     <div class="container-derecha">
@@ -26,49 +25,87 @@
         <a href="#">Polñitica de cookies</a>
       </div>
     </div>
-
   </div>
 
-  <hr>
+  <hr />
   <p>Copyright © 2024, TKUIDO</p>
 </footer>
 
 <style>
-  #footer{
-    background: #3D6B43;
-    padding: 20px;
+  #footer {
+    background: #3d6b43;
+    padding: 20px 50px 10px 50px;
     text-align: center;
   }
 
-  #Container{
+  #Container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
   }
 
-  #container-izquierdo img{
+  #container-izquierdo img {
     height: 60px;
     width: 60px;
   }
 
-  .container-derecha{
+  .container-derecha {
     display: flex;
-    gap: 20px;
+    /*gap: 20px;*/
+    gap: 60px;
   }
 
-  .links-derecha h4{
+  .links-derecha h4 {
     color: white;
   }
 
-  .links-derecha{
+  .links-derecha {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
   }
 
-  p{
+  p {
     color: white;
+  }
+
+  @media (max-width: 769px) {
+    #footer {
+    background: #3d6b43;
+    padding: 20px 30px 10px 30px;
+    text-align: center;
+  }
+    #Container {
+      column-gap: 30px;
+    }
+
+    #container-izquierdo img {
+      height: 60px;
+      width: 60px;
+    }
+
+    .container-derecha {
+      display: flex;
+      /*gap: 20px;*/
+      gap: 20px;
+    }
+
+    .links-derecha h4 {
+      color: white;
+      
+    }
+
+    .links-derecha {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    p {
+      color: white;
+    }
   }
 </style>

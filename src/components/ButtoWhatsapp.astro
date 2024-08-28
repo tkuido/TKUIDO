@@ -1,47 +1,52 @@
 ---
-  interface Props {
-    //url: string; es el link de whatsapp pero si fueran varios se descomenta para usarlo
-    text?: string;
-    message?: string;
-  }
+interface Props {
+  //url: string; es el link de whatsapp pero si fueran varios se descomenta para usarlo
+  text?: string;
+  message?: string;
+}
 
-  const { text, message } = Astro.props;
-  const whatsappUrl = `https://wa.me/584126206812?text=${encodeURIComponent(message || '')}`;
+const { text, message } = Astro.props;
+const whatsappUrl = `https://wa.me/584126206812?text=${encodeURIComponent(message || "")}`;
 ---
 
 <a href={whatsappUrl} target="_blank" rel="noopener">
-  <button>{text}
-    <img src="../img/icons/icons-whatsapp.svg" alt="icono whatsapp">
+  <button
+    >{text}
+    <img src="../img/icons/icons-whatsapp.svg" alt="icono whatsapp" />
   </button>
 </a>
 
 <style>
-  button{
-    background: #6BB580;
+  button {
+    background: #6bb580;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
-    transform: all .5s ease;
+    transform: all 0.5s ease;
     font-weight: 600;
     display: flex;
     align-items: center;
   }
 
-  button img{
+  button img {
     width: 20px;
     height: 20px;
-    background: #6BB580 ;
+    background: #6bb580;
     margin-left: 10px;
-
   }
 
-  button:hover{
+  button:hover {
     background: #128c7e;
-    img{
+    img {
       background: #128c7e;
     }
   }
-
+  @media (max-width: 769px) {
+    button {
+      padding: 10px 10px;
+      font-size: 0.7rem;
+    }
+  }
 </style>

@@ -1,89 +1,123 @@
 ---
+
 ---
+
 <section id="container">
-  <img src="../img/contacto.jpg" alt="contacto tkuido">
+  <img src="../img/contacto.jpg" alt="contacto tkuido" />
   <div class="nosotros-info">
     <div class="titulos">
       <h2>Contáctanos</h2>
       <h3>Nuestro equipo te espera</h3>
     </div>
-    <div id="info"> 
-      <p>Nuestro equipo de atención al cliente te espera para ayudar en tu proceso de compra o aclarar cualquier duda.</p>
-      <p>Si deseas más información sobre nuestros servicios, pólizas o cualquier otro tema, no dudes en contactarnos.</p>
+    <div id="info">
+      <p>
+        Nuestro equipo de atención al cliente te espera para ayudar en tu
+        proceso de compra o aclarar cualquier duda.
+      </p>
+      <p>
+        Si deseas más información sobre nuestros servicios, pólizas o cualquier
+        otro tema, no dudes en contactarnos.
+      </p>
     </div>
     <div id="formulario">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe2pH51Bg-M_tIqjaOrVCu5AvwTw0zLg5j563ZQcQ8oHOMNXw/viewform?embedded=true" width="640" height="924">Cargando…</iframe>
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSe2pH51Bg-M_tIqjaOrVCu5AvwTw0zLg5j563ZQcQ8oHOMNXw/viewform?embedded=true"
+        width="640"
+        height="924">Cargando…</iframe
+      >
     </div>
   </div>
 </section>
 
 <style>
-#container {
-  display: flex;
-  flex-direction: row;
-  padding: 50px;
-  height: 100vh;
-}
+  #container {
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    height: 100vh;
+  }
 
-.nosotros-info {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 30px;
-}
+  .nosotros-info {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+  }
 
-img {
-  width: 50%;
-  height: 100%;
-  border-radius: 8%;
-}
+  img {
+    margin: 0 auto;
+    width: calc(50% - 120px);
+    height: 100%;
+    /*width: 50%;
+  height: 100%;*/
+    border-radius: 8%;
+  }
 
+  .titulos {
+    text-align: center;
+    padding: 10px;
+  }
 
-.titulos{
-  text-align: center;
-  padding: 10px;
-}
+  h2 {
+    font-size: 2.2rem;
+    /*font-size: 2rem;*/
+    font-weight: 600;
+    color: #333;
+  }
 
-h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #333;
-}
+  h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+  }
 
-h3 {
-  margin-top: 10px;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #333;
-}
+  p {
+    padding: 10px;
+    font-size: 1.2rem;
+    /*font-size: 1.5rem;*/
+    font-weight: 400;
+    color: #333;
+    text-align: justify;
+  }
 
-p {
-  padding: 10px;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #333;
-  text-align: justify;
-}
+  #info {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
 
-#info {
-  width: 100%;
-  height: auto;
-  margin-top: 20px;
-}
+  #formulario {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+  }
 
-#formulario {
-  width: 100%;
-  height: 100%;
-  margin-top: 20px;
-}
+  iframe {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
 
-iframe {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
+  @media (max-width: 769px) {
+    #container {
+      flex-direction: column;
+      padding: 50px;
+      height: 100vh;
+      margin-top: 50px;
+    }
 
+    .nosotros-info {
+      width: 100%;
+      margin: 0;
+    }
+
+    img {
+      display: none;
+    }
+
+  }
 </style>
