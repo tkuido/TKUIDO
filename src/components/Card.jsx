@@ -10,27 +10,7 @@ const Card = ({ idCard }) => {
     return <div className="text-gray-500">Producto no encontrado</div>;
   }
 
-  return (/* <div className="card bg-white shadow-md rounded-lg overflow-hidden">
-    <img
-      src={product.img.src}
-      alt={product.img.alt}
-      className="w-full object-cover"
-    />
-    <div className="p-4">
-      <h4 className="font-bold text-lg mb-2">{product.title}</h4>
-      <p className="text-gray-700 mb-4">{product.price}</p>
-      <ul className="list-disc list-inside mb-4">
-        {product.features.slice(0, 3).map((feature, index) => (
-          <li key={index} className="text-gray-600">{feature}</li>
-        ))}
-      </ul>
-      <a href={`/products/${idCard}`}>
-        <button className="bg-backgroundButton hover:bg-backgroundButtonHover text-white font-bold py-2 px-4 rounded">
-          Ver detalles
-        </button>
-      </a>
-    </div>
-  </div>*/
+  return (
     <div className="card bg-white shadow-md rounded-3xl overflow-hidden">
       <img
         src={product.img.src}
