@@ -1,0 +1,56 @@
+---
+import BaseLayout from "../../layout/BaseLayout.astro";
+import ButtonBack from "../../components/ButtonBack.astro";
+import Card from "../../components/Card.jsx";
+---
+
+<BaseLayout
+  title={"Productos Telemedicina"}
+  description={"Página de productos de telemedicina de TKUIDO venta de seguros "}
+>
+<ButtonBack ruta="/categoria"/>
+  <main>
+    <h1>Productos Telemedicina</h1>
+    <section id="telemedicina-container">
+      <Card idCard={"3"} client:visible />
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20vh;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  #telemedicina-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  @media (max-width: 768px) {
+    #telemedicina-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+</style>

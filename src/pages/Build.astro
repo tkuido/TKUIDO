@@ -3,10 +3,10 @@ import BaseLayout from "../layout/BaseLayout.astro"
 
 ---
 
-<BaseLayout title={"404"} description={"Página no encontrada"}>
+<BaseLayout title={"Construcción"} description={"Página en construcción"}>
   <main id="main-404">
-    <h1>404</h1>
-    <p>El sitio web al que intenta acceder no existe o se ha movido. Vuelva a nuestra página de inicio.</p>
+    <h1>Página web en construcción</h1>
+    <p>La página web está actualmente en construcción. Por favor, vuelva más tarde.</p>
     <button>
       <a href="/">Volver al inicio</a>
     </button>
@@ -25,9 +25,11 @@ import BaseLayout from "../layout/BaseLayout.astro"
 }
 h1{
   color: #6BB580;
-  font-size: 260px;
+  font-size: 130px;
+  text-align: center;
   margin: 0;
   padding: 0;
+  margin-bottom: 20px;
 }
 p{
   font-size: 40px;
@@ -52,7 +54,7 @@ a{
 
 @media (max-width: 768px) {
   h1{
-    font-size: 100px;
+    font-size: 40px;
   }
   p{
     margin-top: 20px;
