@@ -1,0 +1,140 @@
+---
+import type { GetStaticPaths } from "astro";
+import BaseLayout from "../../layout/BaseLayout.astro";
+import { getProductById } from "../../components/Products.ts";
+import ButtonBack from "../../components/ButtonBack.astro";
+import ButtoWhastapp from "../../components/ButtoWhatsapp.astro";
+
+export const getStaticPaths = (() => {
+  return [
+    { params: { id: "1" } },
+    { params: { id: "2" } },
+    { params: { id: "3" } },
+  ];
+}) satisfies GetStaticPaths;
+
+const { id } = Astro.params;
+
+let product;
+
+if (!id) {
+  return {
+    status: 404,
+    error: new Error(`Product ${id} not found`),
+  };
+} else {
+  product = getProductById(id);
+}
+---
+
+<BaseLayout title=`Productos ${id}` description="Detalles de productos">
+  <ButtonBack ruta="/categoria" />
+  <section id="container-product">
+    <div class="container">
+      <img src={product?.img.src} alt={product?.img.alt} />
+
+      <div class="information">
+        <h2>{product?.title}</h2>
+        <h3>{product?.price}</h3>
+        <h4>{product?.categoria} {product?.tipo}</h4>
+
+        <ul>
+          {product?.features.map((feature) => <li>{feature}</li>)}
+        </ul>
+
+        <p><b>{product?.adicional.title}</b></p>
+        <ul>
+          {product?.adicional.features.map((feature) => <li>{feature}</li>)}
+        </ul>
+
+        <div class="conditions">
+          <h3>Condiciones:</h3>
+          <ul>
+            {product?.condiciones.map((feature) => <li>{feature}</li>)}
+          </ul>
+        </div>
+
+        <ButtoWhastapp
+        text="Comprar ahora"
+        message=`Hola! quiero comprar el producto servicios ${product?.title}`/>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  #container-product {
+    padding: 20px;
+    height: max-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 20px;
+  }
+
+  .container img {
+    border-radius: 10px;
+  }
+
+  .information {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 30px 30px 30px;
+  }
+
+  .information h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .information h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .information h4 {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  ul {
+    list-style: outside;
+  }
+
+  .conditions {
+    border: 1px solid #acacac;
+    background: rgba(255, 255, 255);
+    border-radius: 10px;
+    padding-left: 10px;
+  }
+
+  .conditions ul {
+    padding-left: 30px;
+  }
+
+  @media (max-width: 769px) {
+
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container img {
+      border-radius: 10px;
+      height: calc(100vh - 50%);
+    }
+  }
+</style>

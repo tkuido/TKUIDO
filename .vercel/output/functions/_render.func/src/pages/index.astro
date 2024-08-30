@@ -1,0 +1,168 @@
+---
+import BaseLayout from "../layout/BaseLayout.astro";
+import MainStart from "../sections/MainStart.astro";
+import Servicios from "../sections/servicios.astro";
+import Nosotros from "../sections/Nosotros.astro";
+import Contacto from "../sections/Contacto.astro";
+import FAQ from "../components/FAQ.jsx";
+import Card from "../components/Card.jsx";
+import Slider from "../sections/Slider.astro";
+---
+
+<BaseLayout
+  title={"Home"}
+  description={"Página de inicio de TKUIDO venta de seguros "}
+>
+  <main>
+    <section id="hero-container">
+      <MainStart />
+    </section>
+
+    <section id="slider">
+      <Slider />
+    </section>
+
+    <section id="noticias-container"></section>
+
+    <section id="servicio-container">
+      <Servicios />
+    </section>
+
+    <section id="polizas-container">
+      <h2>Productos</h2>
+      <div>
+        <Card idCard={"1"} client:visible />
+        <Card idCard={"2"} client:visible />
+        <Card idCard={"3"} client:visible />
+      </div>
+      <a href="/categoria">
+        <button> Ver todos los productos </button>
+      </a>
+    </section>
+
+    <section id="nosotro-container">
+      <Nosotros />
+    </section>
+
+    <section id="contacto-container">
+      <Contacto />
+    </section>
+
+    <section id="faq-container">
+      <h2><span>FAQ</span> <span>Preguntas Frecuentes</span></h2>
+      <div>
+        <FAQ client:visible />
+      </div>
+    </section>
+  </main>
+
+  <style>
+    section {
+      width: 100%;
+    }
+    #hero-container {
+      /*height: 70vh;*/
+    }
+
+    #slider {
+      /*width: 100%;*/
+      display: flex;
+      justify-content: center;
+    }
+
+    #servicio-container {
+      /*width: 100%;*/
+    }
+
+    #polizas-container {
+      /*width: 100%;*/
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /*margin-top: 50px;*/
+      margin-top: 25px;
+      margin-bottom: 50px;
+    }
+
+    #polizas-container h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #333;
+      /*margin-bottom: 10px;*/
+      margin-bottom: 30px;
+    }
+
+    #polizas-container div {
+      width: 75%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+    }
+
+    #polizas-container a button {
+      background: #6bb580;
+      color: white;
+      border: none;
+      /*padding: 10px 20px; */
+      padding: 15px 25px;
+      border-radius: 20px;
+      cursor: pointer;
+      transform: all 0.5s ease;
+      font-weight: 600;
+      margin-top: 30px;
+    }
+
+    #polizas-container a button:hover {
+      background: #128c7e;
+    }
+
+    #nosotro-container {
+      /*width: 100%;*/
+    }
+
+    #contacto-container {
+      /*width: 100%;*/
+    }
+
+    #faq-container {
+      /*width: 100%;*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 50px;
+      margin-top: 50px;
+    }
+
+    #faq-container h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    #faq-container div {
+      width: 80%;
+    }
+
+    @media (max-width: 769px) {
+      #polizas-container div {
+        flex-direction: column;
+      }
+
+      #faq-container {
+        margin-top: 0;
+      }
+
+      #faq-container h2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0 20px 50px 20px;
+      }
+    }
+  </style></BaseLayout
+>
