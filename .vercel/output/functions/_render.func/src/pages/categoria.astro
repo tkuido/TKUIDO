@@ -1,0 +1,96 @@
+---
+import BaseLayout from "../layout/BaseLayout.astro";
+import ButtonBack from "../components/ButtonBack.astro";
+---
+
+<BaseLayout
+  title={"Categoria"}
+  description={"Página de categorias de TKUIDO venta de seguros "}
+>
+<ButtonBack ruta="/"/>
+  <main>
+    <h1>Categorías</h1>
+    <section id="categoria-container">
+      <a href="/listaProductos/paquetes" id="paquetes">
+        <h2>Paquetes</h2>
+      </a>
+
+      <a href="/listaProductos/funebres" id="funebre">
+        <h2>Fúnebre</h2>
+      </a>
+
+      <a href="/listaProductos/telemedicina" id="Telemedicina">
+        <h2>Telemedicina</h2>
+      </a>
+
+      <a href="/Build" id="RCV">
+        <h2>RCV</h2>
+      </a>
+
+      <a href="/Build" id="Asistencia">
+        <h2>Asistencia Vial</h2>
+      </a>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30vh;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  #categoria-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #333;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    background: rgb(61,107,67);
+    background: linear-gradient(90deg, rgba(61,107,67,1) 0%, rgba(107,181,128,1) 56%);
+    color: white;
+  }
+
+  a:hover {
+    background: rgb(107,181,128);
+    background: linear-gradient(90deg, rgba(107,181,128,1) 45%, rgba(61,107,67,1) 100%);
+    color: white;
+  }
+
+  #paquetes {
+    grid-column: 1 / 3;
+  }
+
+  @media screen and (max-width: 768px) {
+    #categoria-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      width: 100%;
+    }
+    
+  }
+</style>

@@ -3,7 +3,33 @@ import ButtoWhatsapp from "../components/ButtoWhatsapp.astro";
 ---
 
 <div id="imagen-wrapper">
-  <div id="imagen"></div>
+  <!-- -->
+  <div class="slider">
+    <ul>
+      <li>
+        <img
+          src="../../public/img/heroImages/bgimg.avif"
+          alt="Adultos Mayores"
+        />
+      </li>
+
+      <li>
+        <img
+          src="../../public/img/heroImages/AdultoMayor.avif"
+          alt="Adultos Mayores"
+        />
+      </li>
+
+      <li>
+        <img
+          src="../../public/img/heroImages/Familia.avif"
+          alt="Adultos Mayores"
+        />
+      </li>
+    </ul>
+  </div>
+  <!-- -->
+  <!-- <div id="imagen"></div>-->
   <div class="content">
     <div id="texto">
       <h1>Mantén seguro lo que más quieres.</h1>
@@ -25,23 +51,68 @@ import ButtoWhatsapp from "../components/ButtoWhatsapp.astro";
 
     <div class="social">
       <a href="https://www.instagram.com/tkuido247?igsh=cWxuMXR4OTM0c2Jm">
-        <img src="../img/icons/icono-instagram.png" alt="instagram">
+        <img src="../img/icons/icono-instagram.png" alt="instagram" />
       </a>
       <a href="https://www.facebook.com/people/TKuido-247/61564934094455/">
-        <img src="../img/icons/icon-facebook.png" alt="facebook">
+        <img src="../img/icons/icon-facebook.png" alt="facebook" />
       </a>
       <a href="https://www.tiktok.com/@tkuido.247?_t=8pFx3vxYutK&_r=1">
-        <img src="../img/icons/icon-tik-tok.png" alt="tik tok">
+        <img src="../img/icons/icon-tik-tok.png" alt="tik tok" />
       </a>
       <a href="https://www.linkedin.com/company/tkuido-24-7/">
-        <img src="../img/icons/icon-linkedin.png" alt="linkedin">
+        <img src="../img/icons/icon-linkedin.png" alt="linkedin" />
       </a>
     </div>
-
   </div>
 </div>
 
 <style>
+  /**Slider */
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .slider ul {
+    display: flex;
+    animation: cambio 20s infinite alternate linear;
+    width: 300%;
+  }
+  .slider li {
+    width: auto;
+    list-style: none;
+  }
+  .slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @keyframes cambio {
+    0% {
+      margin-left: 0;
+    }
+    40% {
+      margin-left: 0;
+    }
+
+    45% {
+      margin-left: -100%;
+    }
+    70% {
+      margin-left: -100%;
+    }
+
+    75% {
+      margin-left: -200%;
+    }
+    100% {
+      margin-left: -200%;
+    }
+  }
+  /** */
   #imagen-wrapper {
     position: relative;
     height: max-content;
@@ -53,30 +124,6 @@ import ButtoWhatsapp from "../components/ButtoWhatsapp.astro";
     padding: 50px;
     border-radius: 15px;
   }
-  #imagen {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("../../public/img/bgimg.png") no-repeat center fixed;
-    background-size: cover;
-    background-position: top;
-  }
-  /*#imagen {
-    /*height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 50px;
-    margin-left: calc(100vw - 98%);
-    margin-right: calc(100vw - 98%);
-    padding: 50px;
-    background: url("../../public/img/bgimg.png") no-repeat center fixed; /*linear-gradient(rgba(5,7,12,0.15),rgba(5,7,12,0.15)),
-    border-radius: 15px;
-    background-size: cover;
-    background-position: top;
-  }*/
   .content {
     position: relative;
     z-index: 1;
@@ -117,23 +164,31 @@ import ButtoWhatsapp from "../components/ButtoWhatsapp.astro";
   }
 
   @media (max-width: 769px) {
+    .slider,
+    .slider ul,
+    .slider img {
+      height: 100vh;
+    }
+    .slider img {
+      object-position: 75%;
+      filter: brightness(50%);
+    }
     #imagen-wrapper {
       margin-left: calc(100vw - 98vw);
       margin-right: calc(100vw - 98vw);
       padding: 25px;
       margin-top: auto;
     }
-    #imagen {
-      background: url("../../public/img/bgimg.png") no-repeat center;
+    .imagen {
+      background: url("../../public/img/adultomayor.avif") no-repeat center;
       background-position: 75%;
       background-size: cover;
-      filter: brightness(50%);
     }
     .content {
       display: flex;
       flex-direction: column;
     }
-    .content:last-child{
+    .content:last-child {
       column-gap: 20px;
     }
     #texto {

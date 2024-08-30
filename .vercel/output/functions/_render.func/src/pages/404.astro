@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../layout/BaseLayout.astro"
+
+---
+
+<BaseLayout title={"404"} description={"Página no encontrada"}>
+  <main id="main-404">
+    <h1>404</h1>
+    <p>El sitio web al que intenta acceder no existe o se ha movido. Vuelva a nuestra página de inicio.</p>
+    <button>
+      <a href="/">Volver al inicio</a>
+    </button>
+  </main>
+</BaseLayout>
+
+<style>
+#main-404{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vw;
+}
+h1{
+  color: #6BB580;
+  font-size: 260px;
+  margin: 0;
+  padding: 0;
+}
+p{
+  font-size: 40px;
+  width: 50%;
+  text-align: center;
+  margin-top: -60px;
+}
+button{
+  cursor: pointer;
+  background: #243010;
+  width: 150px;
+  height: 50px;
+  border-radius: 8%;
+}
+a{
+  background: #243010;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  h1{
+    font-size: 100px;
+  }
+  p{
+    margin-top: 20px;
+    font-size: 20px;
+    width: 80%;
+  }
+  button{
+    margin-top: 10px;
+    width: 100px;
+    height: 40px;
+  }
+  a{
+    font-size: 10px;
+  }
+
+  #main-404{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+}
+
+</style>
