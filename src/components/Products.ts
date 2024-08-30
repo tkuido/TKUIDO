@@ -22,7 +22,7 @@ export const getProductById = (id: string) => {
     {
       id: '2',
       title: 'PLAN PLATINUM',
-      price: 'A consultar',
+      price: '9,00$/mes',
       categoria: 'Categoria 2',
       tipo: 'tipo 2',
       img: {

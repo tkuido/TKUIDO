@@ -28,18 +28,16 @@ const { title, description } = Astro.props;
 </html>
 
 <style is:global>
-  @font-face {
-    font-family: "Avenir LTStd-roman";
-    src: url(/public/fonts/AVENIRLTSTD-ROMAN.OTF);
-  }
-
-  @font-face {
-    font-family: "Avenir LTStd-black";
-    src: url(/public/fonts/AVENIRLTSTD-BLACK.OTF);
-  }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;500&display=swap');
 
   * {
-    font-family: "Avenir LTStd-roman", monospace, sans-serif;
+    font-family: "Montserrat", "Poppins" , monospace, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -54,6 +52,9 @@ const { title, description } = Astro.props;
   }
   
   h1 {
-    font-family: "Avenir LTStd-black";
+  font-family: "Montserrat", "Poppins"  ,sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
   }
 </style>

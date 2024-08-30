@@ -1,0 +1,80 @@
+{
+	"version": 3,
+	"routes": [
+		{
+			"src": "^/_astro/(.*)$",
+			"headers": {
+				"cache-control": "public, max-age=31536000, immutable"
+			},
+			"continue": true
+		},
+		{
+			"handle": "filesystem"
+		},
+		{
+			"src": "^\\/_image$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/404\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/500\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/Build\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/categoria\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/listaProductos\\/funebres\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/listaProductos\\/paquetes\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/listaProductos\\/telemedicina\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/nosotros\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/products\\/([^/]+?)\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/servicios\\/AsistenciaVial\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/servicios\\/funerario\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/servicios\\/RCV\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/servicios\\/telemedicina\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/$",
+			"dest": "_render"
+		},
+		{
+			"src": "/.*",
+			"dest": "_render",
+			"status": 404
+		}
+	]
+}

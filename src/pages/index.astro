@@ -26,6 +26,9 @@ import Slider from "../sections/Slider.astro";
 
     <section id="servicio-container">
       <Servicios />
+      <a href="/categoria" class="button-products">
+        <button> Ve nuestros productos </button>
+      </a>
     </section>
 
     <section id="polizas-container">
@@ -35,7 +38,7 @@ import Slider from "../sections/Slider.astro";
         <Card idCard={"2"} client:visible />
         <Card idCard={"3"} client:visible />
       </div>
-      <a href="/categoria">
+      <a href="/categoria" class="button-products">
         <button> Ver todos los productos </button>
       </a>
     </section>
@@ -60,27 +63,25 @@ import Slider from "../sections/Slider.astro";
     section {
       width: 100%;
     }
-    #hero-container {
-      /*height: 70vh;*/
-    }
-
     #slider {
-      /*width: 100%;*/
       display: flex;
       justify-content: center;
     }
 
     #servicio-container {
-      /*width: 100%;*/
-    }
-
-    #polizas-container {
-      /*width: 100%;*/
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      /*margin-top: 50px;*/
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    #polizas-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       margin-top: 25px;
       margin-bottom: 50px;
     }
@@ -89,7 +90,6 @@ import Slider from "../sections/Slider.astro";
       font-size: 2rem;
       font-weight: 600;
       color: #333;
-      /*margin-bottom: 10px;*/
       margin-bottom: 30px;
     }
 
@@ -101,11 +101,10 @@ import Slider from "../sections/Slider.astro";
       gap: 40px;
     }
 
-    #polizas-container a button {
+    .button-products {
       background: #6bb580;
       color: white;
       border: none;
-      /*padding: 10px 20px; */
       padding: 15px 25px;
       border-radius: 20px;
       cursor: pointer;
@@ -114,20 +113,11 @@ import Slider from "../sections/Slider.astro";
       margin-top: 30px;
     }
 
-    #polizas-container a button:hover {
+    .button-products button:hover {
       background: #128c7e;
     }
 
-    #nosotro-container {
-      /*width: 100%;*/
-    }
-
-    #contacto-container {
-      /*width: 100%;*/
-    }
-
     #faq-container {
-      /*width: 100%;*/
       display: flex;
       justify-content: center;
       align-items: center;

@@ -10,15 +10,19 @@
       <div class="social">
         <a href="https://www.instagram.com/tkuido247?igsh=cWxuMXR4OTM0c2Jm">
           <img src="../img/icons/icono-instagram.png" alt="instagram">
+          <p>@TKUIDO247</p>
         </a>
         <a href="https://www.facebook.com/people/TKuido-247/61564934094455/">
           <img src="../img/icons/icon-facebook.png" alt="facebook">
+          <p>TKUIDO 24/7</p>
         </a>
         <a href="https://www.tiktok.com/@tkuido.247?_t=8pFx3vxYutK&_r=1">
           <img src="../img/icons/icon-tik-tok.png" alt="tik tok">
+          <p>@TKUIDO.247</p>
         </a>
         <a href="https://www.linkedin.com/company/tkuido-24-7/">
           <img src="../img/icons/icon-linkedin.png" alt="linkedin">
+          <p>TKUIDO 24/7</p>
         </a>
       </div>
     </div>
@@ -127,16 +131,24 @@
   .social {
     display: flex;
     margin-top: 10px;
+    flex-direction: column;
   }
 
   .social a {
     width: 60px;
     height: 60px;
+    display: flex;
+    align-items: center;
   }
 
   @media screen and (max-width: 769px){
     .social{
       flex-direction: column;
+    }
+
+    .social a p{
+      display: none;
+      visibility: hidden;
     }
 
   }
