@@ -61,10 +61,9 @@ import ButtoWhatsapp from "./ButtoWhatsapp.astro";
       </ul>
     </nav>
 
-    <ButtoWhatsapp
-      text="Consulta en Linea"
-      message="Hola! quiero más información de sus servicios"
-    />
+    <a class="register" href="https://forms.gle/nCQkFpJuwbbZVxD56" target="_blank" rel="noopener">
+      <button class="register-boton">Regístrate</button>
+    </a>
   </div>
 </header>
 
@@ -99,22 +98,6 @@ import ButtoWhatsapp from "./ButtoWhatsapp.astro";
     flex-direction: row;
     justify-content: space-between;
   }
-  /*ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /*width: 25%;
-    gap: 16px;
-    margin-right: 20px;
-  }
-  ul a {
-    color: #111406;
-    font-weight: 600;
-  }
-  nav {
-    display: flex;
-    align-items: center;
-  }*/
   .navbar {
     display: flex;
   }
@@ -138,19 +121,24 @@ import ButtoWhatsapp from "./ButtoWhatsapp.astro";
   .links:hover {
     font-size: 18px;
   }
-  /*nav {
+
+  .register-boton {
+    background-color: #6bb580;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transform: all 0.5s ease;
+    font-weight: 600;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    /*width: 25%;
-    gap: 16px;
-    margin-right: 20px;
+    margin-left: 20px;
   }
 
-  nav a {
-    color: #111406;
-    font-weight: 600;
-  }*/
+  .register-boton:hover {
+    background-color: #128c7e;
+  }
 
   @media (max-width: 769px) {
     header {
