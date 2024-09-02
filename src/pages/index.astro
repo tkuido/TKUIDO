@@ -7,6 +7,7 @@ import Contacto from "../sections/Contacto.astro";
 import FAQ from "../components/FAQ.jsx";
 import Card from "../components/Card.jsx";
 import Slider from "../sections/Slider.astro";
+import ButtoWhatsapp from "../components/ButtoWhatsapp.astro";
 ---
 
 <BaseLayout
@@ -22,14 +23,17 @@ import Slider from "../sections/Slider.astro";
       <Slider />
     </section>
 
-    <section id="noticias-container"></section>
-
     <section id="servicio-container">
       <Servicios />
       <a href="/categoria" class="button-products">
         <button> Ve nuestros productos </button>
       </a>
     </section>
+
+    <div id="Boton-fijo">
+      <ButtoWhatsapp 
+      text="COMPRAR AHORA"/>
+    </div>
 
     <section id="polizas-container">
       <h2>Productos</h2>
@@ -58,6 +62,19 @@ import Slider from "../sections/Slider.astro";
       </div>
     </section>
   </main>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const botonFijo = document.getElementById('Boton-fijo');
+      if (botonFijo !== null) {
+        if (window.scrollY > 100) {
+          botonFijo.classList.add('visible');
+        } else {
+          botonFijo.classList.remove('visible');
+        }
+      }
+    });
+  </script>
 
   <style>
     section {
@@ -137,6 +154,20 @@ import Slider from "../sections/Slider.astro";
       width: 80%;
     }
 
+    #Boton-fijo {
+      display: none;
+      position: fixed;
+      right: 50px;
+      bottom: 50px;
+      width: calc(100vw - 86vw);
+      padding: 5px;
+      margin-right: 50px;
+    }
+
+    #Boton-fijo.visible {
+      display: block; 
+    }
+
     @media (max-width: 769px) {
       #polizas-container div {
         flex-direction: column;
@@ -153,6 +184,19 @@ import Slider from "../sections/Slider.astro";
         text-align: center;
         margin: 0 20px 50px 20px;
       }
+
+      #Boton-fijo {
+      display: none;
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: calc(100vw - 76%);
+      margin-right: 40px;
+    }
+
+    #Boton-fijo.visible {
+      display: block; 
+    }
     }
   </style></BaseLayout
 >
