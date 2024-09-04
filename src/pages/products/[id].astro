@@ -10,6 +10,9 @@ export const getStaticPaths = (() => {
     { params: { id: "1" } },
     { params: { id: "2" } },
     { params: { id: "3" } },
+    { params: { id: "4" } },
+    { params: { id: "5" } },
+    { params: { id: "6" } },
   ];
 }) satisfies GetStaticPaths;
 
@@ -55,9 +58,9 @@ if (!id) {
         </div>
 
         <ButtoWhastapp
-        text="Comprar ahora"
-        message=`Hola! quiero comprar el producto servicios ${product?.title}`/>
-
+          text="Comprar ahora"
+          message=`Hola! quiero comprar el producto servicios ${product?.title}`
+        />
       </div>
     </div>
   </section>
@@ -126,7 +129,6 @@ if (!id) {
   }
 
   @media (max-width: 769px) {
-
     .container {
       display: flex;
       flex-direction: column;
